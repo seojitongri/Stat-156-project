@@ -1,0 +1,58 @@
+colspecs = [
+    (0, 4),    # year
+    (4, 6),    # datanum
+    (6, 14),   # serial
+    (14, 24),  # hhwt
+    (24, 26),  # statefip
+    (26, 30),  # county
+    (30, 31),  # gq
+    (31, 35),  # pernum
+    (35, 45),  # perwt
+    (45, 47),  # momloc
+    (47, 48),  # sex
+    (48, 51),  # age
+    (51, 52),  # birthqtr
+    (52, 56),  # birthyr
+    (56, 57),  # race
+    (57, 60),  # raced
+    (60, 61),  # hispan
+    (61, 64),  # hispand
+    (64, 67),  # bpl
+    (67, 72),  # bpld
+    (72, 76),  # yrimmig
+    (76, 78),  # language
+    (78, 82),  # languaged
+    (82, 83),  # speakeng
+    (83, 84),  # school
+    (84, 86),  # higrade
+    (86, 89),  # higraded
+    (89, 91),  # educ
+    (91, 94),  # educd
+    (94, 95),  # gradeatt
+    (95, 97),  # gradeattd
+    (97, 100), # migplac5
+    (100, 103),# migcogrp
+    (103, 104),# samemet5
+    (104, 105) # migsamp
+]
+
+names = [
+    "year", "datanum", "serial", "hhwt", "statefip", "county", "gq",
+    "pernum", "perwt", "momloc", "sex", "age", "birthqtr", "birthyr",
+    "race", "raced", "hispan", "hispand", "bpl", "bpld", "yrimmig",
+    "language", "languaged", "speakeng", "school", "higrade", "higraded",
+    "educ", "educd", "gradeatt", "gradeattd", "migplac5", "migcogrp",
+    "samemet5", "migsamp"
+]
+
+
+import pandas as pd
+
+df_test = pd.read_fwf(
+    "census1980.dat",
+    colspecs=colspecs,
+    names=names,
+    nrows=10
+)
+
+df_test
